@@ -48,17 +48,17 @@ app.post("/weather", async (req, res) => {
     name
     */
 
-    // res.status(200).json(userData)
-      res.status(200).send(` Hello user the weather in ${city} is as follows  :\n
-        The temperature in ${city } is    :${(temp-273).toFixed(2)}
-        The humidity in ${city} is :${humidity}
-        The pressure is ${city} is    :${pressure}
-        The latitude of ${city} is :${latitude}
-        The Longtitude of ${city} is :${longitude}
-        The Climate is ${decribtion}
-        The wind speed is  :${speed}
-        The country is : ${counrty}
-        The City name is : ${name}`);
+    res.status(200).json(userData)
+    //   res.status(200).send(` Hello user the weather in ${city} is as follows  :\n
+    //     The temperature in ${city } is    :${(temp-273).toFixed(2)}
+    //     The humidity in ${city} is :${humidity}
+    //     The pressure is ${city} is    :${pressure}
+    //     The latitude of ${city} is :${latitude}
+    //     The Longtitude of ${city} is :${longitude}
+    //     The Climate is ${decribtion}
+    //     The wind speed is  :${speed}
+    //     The country is : ${counrty}
+    //     The City name is : ${name}`);
   } catch (error) {
     console.log(error);
     res.status(500).json({ mdg: error });
