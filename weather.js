@@ -17,7 +17,7 @@ app.post("/weather", async (req, res) => {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}`
     );
     console.log(outPut.data);
-
+//  data collection
     let temp = outPut.data.main.temp;
     let humidity = outPut.data.main.humidity;
     let pressure = outPut.data.main.pressure;

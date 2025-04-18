@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT ||  8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
@@ -23,25 +23,17 @@ app.post("/add", (req, res) => {
 });
 //      odd or even
 
-app.post("/oddoreven",(req,res)=>{
-    try {
-        
-        let number = req.body;
-        console.log(number)
-        if (number.numb){
-
-        }
-
-    } catch (error) {
-        console.log(error)
-        res.status(500).json({try:error})
+app.post("/oddoreven", (req, res) => {
+  try {
+    let number = req.body;
+    console.log(number);
+    if (number.numb) {
     }
-})
-
-
-
-
-
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ try: error });
+  }
+});
 
 //      LISTERENER
 
